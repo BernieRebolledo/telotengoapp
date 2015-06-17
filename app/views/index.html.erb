@@ -1,5 +1,5 @@
 
-	<div class="header">
+	<div class="container">
 		<div class="jumbotron">
 			<h1>TELO<strong>TENGO</strong></h1>
 			<p>
@@ -19,7 +19,7 @@
 		          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 		          <h4 class="modal-title center">Únete</h4>
 		        </div>
-		        <div class="modal-body" style="width:350px; margin:0 auto">
+		        <div class="modal-body" style="width:75%; margin:0 auto">
 		        	<form action="/users" method="post" class="form-horizontal">
 			        	<div class="form-group">
 							<div class="input-group margin-bottom-sm">
@@ -45,7 +45,7 @@
 						    	</i>Regístrate con Twitter
 						    </a>
 						</div>   
-						<button type="submit" class="btn btn-primary">Enviar</button> 
+						<!-- <button type="submit" class="btn btn-primary">Enviar</button>  -->
 					</form>
 		        </div>
 		        <div class="modal-footer">
@@ -57,12 +57,11 @@
 	</div>	
 	<!-- Modal -->
 
-<h1>Welcome!</h1>
-<div class="menu">
+<div class="container text-center">
 	<%if @user %>
 		<img src="<%=@user.image%>" alt="">
 		<h1><%=@user.name%></h1>
 		<h2><%=@user.email%></h2>
 	<%end%>
-	<a href="/signout">Cerrar Sesión</a>
+	<a class="btn btn-danger" href="/signout">Cerrar Sesión</a>
 </div>
