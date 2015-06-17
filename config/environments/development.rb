@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  ENV["FB_ID"] = "1644141235820590"
-  ENV["FB_SECRET"] = "8846589eb6fbe734fd6d1c9803a301df"
+  ENV["FB_ID"] = "856166574502149"
+  ENV["FB_SECRET"] = "421ad5bc298c1b807c3f7e2093a3173e"
   ENV["TW_ID"] = "i5JnnAx46k2T0PgXzYmcpPw5O"
   ENV["TW_SECRET"] = "0bpmoiAeMcM29WxYoINgvT2J9c7sayCTR4Y1c2CcUbO9LnrnTA"
   # In the development environment your application's code is reloaded on

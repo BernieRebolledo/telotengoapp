@@ -19,6 +19,12 @@
 .margin-bottom-sm{
 	margin-bottom: 10px;
 }
+.margin-bottom-m{
+	margin-bottom: 20px;
+}
+.margin-vertical{
+	margin: 15px 0;
+}
 .jumbotron{
 	background-image: url("bg1.jpg");
 	margin: 0;

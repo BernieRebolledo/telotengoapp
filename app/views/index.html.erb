@@ -28,14 +28,14 @@
 							<span class="caret"></span>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="dLabel">
-							   	<form class="form-inline text-center">
+							   	<%= form_tag("/users", method: "post", :class => "form-inline text-center") do %>
 								  <div class="form-group">
 								    <label class="sr-only" for="exampleInputEmail3">Email</label>
-								    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+								    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" required>
 								  </div>
 								  <div class="form-group">
 								    <label class="sr-only" for="exampleInputPassword3">Contraseña</label>
-								    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+								    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password" required>
 								  </div>
 								  <div class="checkbox">
 								    <label>
@@ -43,20 +43,20 @@
 								    </label>
 								  </div>
 								  <button type="submit" class="btn btn-success">Inicia Sesión</button>
-								</form>
+								<% end %>
 						  	</div>
 						</li>
-						<li style="width:200px; margin: 0 auto">
+						<li style="">
 							<span>
-							<a href="/auth/facebook" class="btn btn-social btn-facebook" style="width:190px">
+							<a href="/auth/facebook" class="btn btn-social btn-facebook" style="width:100%;text-align:center">
 						   	<i class="fa fa-facebook"></i>Inicia con Facebook
 						    </a>								
 							</span>
 
 						</li>
-						<li style="width:200px; margin: 0 auto">
+						<li style="">
 							<span>
-							<a href="/auth/twitter" class="btn btn-social btn-twitter" style="width:190px">
+							<a href="/auth/twitter" class="btn btn-social btn-twitter" style="width:100%;text-align:center">
 						    <i class="fa fa-twitter">		
 						    </i>Inicia con Twitter
 						    </a>	
@@ -82,21 +82,26 @@
 		          <h4 class="modal-title center">Únete</h4>
 		        </div>
 		        <div class="modal-body" style="width:75%; margin:0 auto">
-		        	<form action="/users" method="post" class="form-horizontal">
+		        	<%= form_tag("/users", method: "post", :class => "form-horizontal") do %>
 			        	<div class="form-group">
 							<div class="input-group margin-bottom-sm">
 							<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-							<input class="form-control" type="text" name="name" placeholder="Nombre">
+							<input class="form-control" type="text" name="user[name]" placeholder="Nombre" required>
 							</div>	
 							<div class="input-group margin-bottom-sm">
 							<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-							<input class="form-control" type="text" name="email" placeholder="Email">
+							<input class="form-control" type="email" name="user[email]" placeholder="Email" required>
 							</div>
 							<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-							<input class="form-control" name="password"type="password" placeholder="Contraseña">
-							</div>				  
+							<input class="form-control" name="user[password]" type="password" placeholder="Contraseña" required>
+							</div>	
+										  
 						</div>
+						<div class="text-center margin-vertical">
+							<button type="submit" class="btn btn-primary">Enviar</button>
+						</div>
+							
 						<div class="form-group">
 							<a href="/auth/facebook" class="btn btn-block btn-social btn-facebook">
 						    	<i class="fa fa-facebook"></i>Regístrate con Facebook
@@ -108,11 +113,10 @@
 						    </a>
 						</div>   
 						<!-- <button type="submit" class="btn btn-primary">Enviar</button>  -->
-					</form>
+					<% end %>
 		        </div>
 		        <div class="modal-footer">
 		          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-		          <button type="submit" class="btn btn-primary">Enviar</button>
 		        </div>
 	      	</div>
 	    </div>

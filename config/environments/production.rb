@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  ENV["FB_ID"] = "1644493412452039"
-  ENV["FB_SECRET"] = "da0abd8400d6162bef3bfab213af986e"
+  ENV["FB_ID"] = "856163164502490"
+  ENV["FB_SECRET"] = "03ea06c2f0b2f7423b0128b5a41c4ddc"
   ENV["TW_ID"] = "i5JnnAx46k2T0PgXzYmcpPw5O"
   ENV["TW_SECRET"] = "0bpmoiAeMcM29WxYoINgvT2J9c7sayCTR4Y1c2CcUbO9LnrnTA"
   # Code is not reloaded between requests.
