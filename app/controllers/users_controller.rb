@@ -35,7 +35,7 @@ class UsersController < ApplicationController
 	# Método para guardar datos de facebook, twitter.
   	def connect
 	  	if env["omniauth.auth"]
-	  		user = User.where(provider_uid: env["omniauth.auth"]["info"]["uid"]).first
+	  		user = User.where(provider_uid: env["omniauth.auth"]["uid"]).first
 	  		unless user
 		  		user = User.new
 		  		user.name = env["omniauth.auth"]["extra"]["raw_info"]["name"]
