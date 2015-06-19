@@ -104,3 +104,15 @@ body{
 }
 .consumer-green{background-color:#2ba700;border:solid 1px;border-color:white}
 .mini-icon{margin-bottom:3px}
+
+@media (max-width: 768px) { 
+
+#howitwork img{
+	width: 80%;
+}
+#howitwork article{
+	width: 70%;
+
+}
+
+}
