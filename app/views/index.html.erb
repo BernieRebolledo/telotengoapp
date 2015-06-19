@@ -1,79 +1,176 @@
 
-	<div class="container">
-				<div class="jumbotron">
-					<h1>TELO<strong>TENGO</strong></h1>
-					<p>
-						agenda, cotiza, paga... todo desde tu celular.
-						La aplicación para agendar servicios profesionales modernos
-					</p>
-						<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Únete</button>
-						<!-- <button type="button" class="btn btn-success btn-lg" data-target="/pro">Ofrece servicios</button> -->
-				</div>	
-				<nav class="navbar navbar-default">
-				  <div class="container-fluid">
-				    <div class="navbar-header">
-				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				      </button>
-				      <!-- <a class="navbar-brand" href="#">Menú</a> -->
-				    </div>
-				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-				      <ul class="nav navbar-nav">
-						<li class="dropdown">
-							<a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" class="btn btn-success" aria-expanded="false">
-							Iniciar Sesión
-							<span class="caret"></span>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="dLabel">
-							   	<%= form_tag("/users", method: "post", :class => "form-inline text-center") do %>
-								  <div class="form-group">
-								    <label class="sr-only" for="exampleInputEmail3">Email</label>
-								    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" required>
-								  </div>
-								  <div class="form-group">
-								    <label class="sr-only" for="exampleInputPassword3">Contraseña</label>
-								    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password" required>
-								  </div>
-								  <div class="checkbox">
-								    <label>
-								      <input type="checkbox"> Recuérdame
-								    </label>
-								  </div>
-								  <button type="submit" class="btn btn-success">Inicia Sesión</button>
-								<% end %>
-						  	</div>
-						</li>
-						<li style="">
-							<span>
-							<a href="/auth/facebook" class="btn btn-social btn-facebook" style="width:100%;text-align:center">
-						   	<i class="fa fa-facebook"></i>Inicia con Facebook
-						    </a>								
-							</span>
+<div class="container-fluid">
+			<div class="jumbotron">
+				<h1>TELO<strong>TENGO</strong></h1>
+				<p>
+					agenda, cotiza, paga... todo desde tu celular.
+					La aplicación para agendar servicios profesionales modernos
+				</p>
+					<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Únete</button>
+					<!-- <button type="button" class="btn btn-success btn-lg" data-target="/pro">Ofrece servicios</button> -->
+			</div>	
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <!-- <a class="navbar-brand" href="#">Menú</a> -->
+			    </div>
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+			      <ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" class="btn btn-success" aria-expanded="false">
+						Iniciar Sesión
+						<span class="caret"></span>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+						   	<%= form_tag("/users", method: "post", :class => "form-inline text-center") do %>
+							  <div class="form-group">
+							    <label class="sr-only" for="exampleInputEmail3">Email</label>
+							    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" required>
+							  </div>
+							  <div class="form-group">
+							    <label class="sr-only" for="exampleInputPassword3">Contraseña</label>
+							    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password" required>
+							  </div>
+							  <div class="checkbox">
+							    <label>
+							      <input type="checkbox"> Recuérdame
+							    </label>
+							  </div>
+							  <button type="submit" class="btn btn-success">Inicia Sesión</button>
+							<% end %>
+					  	</div>
+					</li>
+					<li style="">
+						<span>
+						<a href="/auth/facebook" class="btn btn-social btn-facebook" style="width:100%;text-align:center">
+					   	<i class="fa fa-facebook"></i>Inicia con Facebook
+					    </a>								
+						</span>
 
-						</li>
-						<li style="">
-							<span>
-							<a href="/auth/twitter" class="btn btn-social btn-twitter" style="width:100%;text-align:center">
-						    <i class="fa fa-twitter">		
-						    </i>Inicia con Twitter
-						    </a>	
-							</span>
-						</li>
-						<li>
-							<a class="btn btn-danger navbar-right" href="/signout">Cerrar Sesión</a>
-						</li>
-				      </ul>
-				    </div>
-				  </div>
-				</nav>				
-	</div>
-
+					</li>
+					<li style="">
+						<span>
+						<a href="/auth/twitter" class="btn btn-social btn-twitter" style="width:100%;text-align:center">
+					    <i class="fa fa-twitter">		
+					    </i>Inicia con Twitter
+					    </a>	
+						</span>
+					</li>
+					<li>
+						<a class="btn btn-danger navbar-right" href="/signout">Cerrar Sesión</a>
+					</li>
+			      </ul>
+			    </div>
+			  </div>
+			</nav>				
+</div>
 	
-
-	<!-- Modal -->
+<div id="howitwork" class="container-fluid text-center section-padding">
+	<h2>¿Como funciona?</h2>
+	<img src="assets/how.png" alt="" height="133" width="400" class="margin-vertical">
+	<h3>Click y agenda</h3>
+	<p>Todo lo que necesitas es un teléfono</p>
+		<section>
+			<article>
+				<h3>Insatisfecho</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse recusandae labore modi iure autem soluta, at est accusamus voluptate commodi! Possimus sunt nobis iusto eligendi dicta recusandae consequatur, repellat tenetur?</p>
+			</article>
+			<article>
+				<h3>asdasd</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur quidem, explicabo velit necessitatibus dolore nihil nisi, animi, ipsa voluptatibus voluptas, sapiente fugiat. Optio eveniet esse ad voluptatem voluptatibus cum.</p>
+			</article>
+			<article>
+				<h3>asdasd</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur quidem, explicabo velit necessitatibus dolore nihil nisi, animi, ipsa voluptatibus voluptas, sapiente fugiat. Optio eveniet esse ad voluptatem voluptatibus cum.</p>
+			</article>
+			<article>
+				<h3>Insatisfecho</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse recusandae labore modi iure autem soluta, at est accusamus voluptate commodi! Possimus sunt nobis iusto eligendi dicta recusandae consequatur, repellat tenetur?</p>
+			</article>
+			<article>
+				<h3>asdasd</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur quidem, explicabo velit necessitatibus dolore nihil nisi, animi, ipsa voluptatibus voluptas, sapiente fugiat. Optio eveniet esse ad voluptatem voluptatibus cum.</p>
+			</article>
+			<article>
+				<h3>asdasd</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur quidem, explicabo velit necessitatibus dolore nihil nisi, animi, ipsa voluptatibus voluptas, sapiente fugiat. Optio eveniet esse ad voluptatem voluptatibus cum.</p>
+			</article>
+		</section>
+</div>
+<div id="services" class="container-fluid text-center section-padding">
+	<div class="row"><span class="gray-primary text-center"><h2>Servicios</h2></span></div>
+	<div class="row margin-auto" style="width:70%"><span class="gray-secondary text-center"><p>Si usted necesita un electricista o un carpintero para su hogar, TELO<strong>TENGO</strong> lo tiene cubierto.</p> </span></div>
+	<div class="vertical-space-20"></div>
+	<div class="row">
+		<div class="margin-auto" style="width:50%">
+			<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		Handyman</span>
+       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdadasd</span>
+       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdad</span>
+       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdasdasdasdadad</span>
+       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdasdasd</span>
+       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asda</span>
+       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdasdadad</span>
+       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		Handyman</span>
+       		<span class="tag-cloud green2"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdasdasd</span>
+       		<span class="tag-cloud green2"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdsa</span>
+       		<span class="tag-cloud green2"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdn</span>
+       		<span class="tag-cloud green2"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		adsasdasd</span>
+       		<span class="tag-cloud green2"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdasd</span>
+       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdasdsadasdads</span>
+       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdasd</span>
+       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdasdasdad</span>
+       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		sadn</span>
+       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdasdsadasd</span>
+       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		asdasd</span>
+       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
+       		Hasdasdasdasda</span>
+       		<br>
+       		<br>
+       		<span class="tag-cloud gray">
+       		<strong>+ </strong> y muchos mas!</span>
+       	</div>
+	</div>
+</div>
+<div id="footer" class="section-padding white-primary">
+	<div class="row text-center">
+		<div class="gray-secondary-light">
+			© Bernie Inc.
+		</div> 
+	</div>
+</div>
+<div class="container text-center">
+	<%if @user %>
+		<img src="<%=@user.image%>" class="img-circle"alt="">
+		<h1><%=@user.name%></h1>
+		<h2><%=@user.email%></h2>
+	<%end%>
+</div>
+<!-- Modal -->
 	<div class="modal" id="myModal">
 	    <div class="modal-dialog">
 			<div class="modal-content">
@@ -121,20 +218,4 @@
 	      	</div>
 	    </div>
 	</div>	
-	<!-- Modal -->
-	<div class="container">
-
-	</div>
-
-
-	
-
-<div class="container text-center">
-
-	<%if @user %>
-		<img src="<%=@user.image%>" class="img-circle"alt="">
-		<h1><%=@user.name%></h1>
-		<h2><%=@user.email%></h2>
-	<%end%>
-	
-</div>
+<!-- Modal -->
