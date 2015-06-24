@@ -46,7 +46,7 @@ class UsersController < ApplicationController
 		  		@user.provider_uid = env["omniauth.auth"]["uid"]
 		  		if @user.save
 		  			session[:user] = @user.id
-		  			UserMailer.welcome_email(@user.name, @user.mail).deliver_now
+		  			# UserMailer.welcome_email(@user.name, @user.mail).deliver_now
 		  			redirect_to "/"
 		  		else
 		  			flash[:notice] = "Los datos no se pudieron guardar."
