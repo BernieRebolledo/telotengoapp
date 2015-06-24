@@ -11,17 +11,19 @@
  * file per style scope.
  *
  *= require normalize
- *= require bootstrap.min
+ *= require superhero-bootstrap.min
  *= require font-awesome.min
  *= require socials
  */
 body{
 	font-size: 16px;
+	background-color:#4e5d6c;
 }
-.container, .container-fluid{
-	padding: 0;
-	margin: 0;
+.main-container{
+	margin: 0 auto;
+	max-width: 1200px;
 }
+
 .navbar{
 	margin-bottom: 0;
 }
@@ -45,28 +47,25 @@ body{
   height: 20px;
   width: 1px;
 }
-.section-padding {
+.section-padding-50 {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.jumbotron{
-	background-image: url("bg1.jpg");
-	margin: 0;
-	padding: 100px 15px;
+.section-padding-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-
-.btn-social{
-	
+#header{
+	background-color:#4e5d6c;
+	margin: 0;
+}
+.btn-social{	
 	padding-bottom: 11px;
 }
 #howitwork{
 	background-color: #383838;
 }
-#howitwork article{
-	display: inline-block;
-	margin: 15px 15px;
-	width: 25%;
-}
+
 #services{
 	color: #3b3b3b;
 	background-color: #f7f7f7;
@@ -104,15 +103,3 @@ body{
 }
 .consumer-green{background-color:#2ba700;border:solid 1px;border-color:white}
 .mini-icon{margin-bottom:3px}
-
-@media (max-width: 768px) { 
-
-#howitwork img{
-	width: 80%;
-}
-#howitwork article{
-	width: 70%;
-
-}
-
-}

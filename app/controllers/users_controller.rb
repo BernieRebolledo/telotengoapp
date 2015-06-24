@@ -35,25 +35,25 @@ class UsersController < ApplicationController
 	# Método para guardar datos de facebook, twitter.
   	def connect
 	  	if env["omniauth.auth"]
-	  		user = User.where(provider_uid: env["omniauth.auth"]["uid"]).first
-	  		unless user
-		  		user = User.new
-		  		user.name = env["omniauth.auth"]["extra"]["raw_info"]["name"]
-		  		user.email = env["omniauth.auth"]["extra"]["raw_info"]["email"]
-		  		user.image = env["omniauth.auth"]["info"]["image"]
-		  		user.gender = env["omniauth.auth"]["extra"]["raw_info"]["gender"]
-		  		user.verified = env["omniauth.auth"]["extra"]["raw_info"]["verified"]
-		  		user.provider_uid = env["omniauth.auth"]["uid"]
-		  		if user.save
-		  			session[:user] = user.id
-		  			UserMailer.email_verification(user.name, user.mail).deliver_now
+	  		@user = User.where(provider_uid: env["omniauth.auth"]["uid"]).first
+	  		unless @user
+		  		@user = User.new
+		  		@user.name = env["omniauth.auth"]["extra"]["raw_info"]["name"]
+		  		@user.email = env["omniauth.auth"]["extra"]["raw_info"]["email"]
+		  		@user.image = env["omniauth.auth"]["info"]["image"]
+		  		@user.gender = env["omniauth.auth"]["extra"]["raw_info"]["gender"]
+		  		@user.verified = env["omniauth.auth"]["extra"]["raw_info"]["verified"]
+		  		@user.provider_uid = env["omniauth.auth"]["uid"]
+		  		if @user.save
+		  			session[:user] = @user.id
+		  			UserMailer.welcome_email(@user.name, @user.mail).deliver_now
 		  			redirect_to "/"
 		  		else
 		  			flash[:notice] = "Los datos no se pudieron guardar."
 		  			redirect_to "/"
 		  		end
 		  	else
-		  		session[:user] = user.id
+		  		session[:user] = @user.id
 		  		redirect_to "/"
 		  	end
 	  	elsif params[:error]
