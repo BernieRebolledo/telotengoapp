@@ -114,7 +114,7 @@ class UsersController < ApplicationController
   	# Método cerrar sesión.
 	def destroy
 		session[:user] = nil
-		redirect_to "/"
+		redirect_to ""
 	end
 
 	#Método privado para indicar los campos que recibe en método create.
