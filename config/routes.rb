@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   get "/auth/:provider/callback" => "users#connect"
   get "/signout" => "users#destroy", as: "signout"
   # get "/users/create" => "users#create"
-  
+  post "/login" => "users#login", as: "login"
+  get "/user_connect" => "users#user_connect"
+  get "/users/profile" => "users#show"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -28,7 +28,7 @@
 						<span class="caret"></span>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="dLabel">
-						   	<%= form_tag("/users", method: "post", :class => "form-inline text-center") do %>
+						   	<%= form_tag("/users", url: login_path , method: "post", :class => "form-inline text-center") do %>
 							  <div class="form-group">
 							    <label class="sr-only" for="exampleInputEmail3">Email</label>
 							    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" required>
@@ -62,9 +62,6 @@
 					    </a>	
 						</span>
 					</li>
-					<li>
-						<a class="btn btn-danger navbar-right" href="/signout">Cerrar Sesión</a>
-					</li>
 			      </ul>
 			    </div>
 			  </div>
@@ -73,7 +70,7 @@
 	<div id="howitwork" class="container-fluid  section-padding-50">
 		<div class="row text-center">
 			<h2>¿Como funciona?</h2>
-			<img src="assets/how.png" alt="" height="133" width="400" class="margin-vertical">
+			<img src="assets/how.png" alt="" height="100" width="350" class="margin-vertical">
 			<h3>Click y agenda</h3>
 			<p>Todo lo que necesitas en un teléfono</p>
 		</div>
@@ -165,13 +162,6 @@
 				© Bernie Inc.
 			</div> 
 		</div>
-	</div>
-	<div class="container text-center">
-		<%if @user %>
-			<img src="<%=@user.image%>" class="img-circle"alt="">
-			<h1><%=@user.name%></h1>
-			<h2><%=@user.email%></h2>
-		<%end%>
 	</div>
 </div>
 	

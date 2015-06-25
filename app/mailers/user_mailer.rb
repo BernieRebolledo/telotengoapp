@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-	default from: 'notifications@telotengo.com'
+	default from: 'info@telotengo.com'
  
 	def welcome_email(name, email)
 		@name = name
