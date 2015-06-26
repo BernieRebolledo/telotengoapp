@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   		# Busco en la tabla de usuarios uno con el id de esa sesión existente.
       	# Se le asigna el valor de la busqueda a la variable de instancia.	
   			@user = User.find(session[:user])
-  			render "/users/profile"
+  			render "profile"
   		end
   	end
 
@@ -46,10 +46,11 @@ class UsersController < ApplicationController
   #   	end
 		if @user.save
 			session[:user] = @user.id
-			flash[:notice] = "Tu usuario se ha creado."
-			redirect_to "/"
+			flash[:notice] = "Su usuario se ha creado."
+			redirect_to @user
 		else
-			render "new"
+			flash[:notice] = "No se puedo crear el usuario intente de nuevo"
+			render "/"
 		end
 	end
 
@@ -113,7 +114,7 @@ class UsersController < ApplicationController
   	# Método cerrar sesión.
 	def destroy
 		session[:user] = nil
-		redirect_to ""
+		redirect_to "/"
 	end
 
 	#Método privado para indicar los campos que recibe en método create.

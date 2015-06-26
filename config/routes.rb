@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # get "/users/create" => "users#create"
   post "/login" => "users#login", as: "login"
   get "/user_connect" => "users#user_connect"
-  get "/users/profile" => "users#show"
+  # get "/users/profile" => "users#connect"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
