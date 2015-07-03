@@ -6,4 +6,12 @@ class UserMailer < ApplicationMailer
 		@mail = email
 		mail(to: @mail, subject: 'Welcome to My Awesome Site')
 	end
+
+	def email_verifier(name, email, url)
+		@name = name
+		@mail = email
+		@url = url
+		mail(to: @mail, subject: 'Verifica tu cuenta')
+	end
+
 end

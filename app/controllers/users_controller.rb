@@ -45,6 +45,8 @@ class UsersController < ApplicationController
 	 #      	end
   #   	end
 		if @user.save
+			# @url = "http://localhost:3000/verifica" + @user.id
+			# UserMailer.email_verifier(@user.name, @user.mail, @url).deliver_now
 			session[:user] = @user.id
 			flash[:notice] = "Su usuario se ha creado."
 			redirect_to @user
@@ -90,7 +92,8 @@ class UsersController < ApplicationController
   			render plain: "Hola #{user.name} puedes indicar sesión por medio de facebook o twitter", content_type: "application/plain"
   		else 	
 	  		if user && user.password == user_params[:password]
-	  			render "/profile"
+	  			session[:user] = user.id
+	  			redirect_to user
 	  		end
 	  	end
   	end
@@ -98,7 +101,17 @@ class UsersController < ApplicationController
   	def user_connect
 
   	end
-
+  	def email_verification
+  		user = User.find(params[:user])
+  		user.verified = true
+  		if user.save
+  			flash[:notice] = "Su cuenta ha sido verificada con éxito"
+  			redirect_to user
+  		else	
+  			flash[:notice] = "No se pudo verificar su cuenta"
+  			redirect_to "/"
+  		end
+  	end
 
 	# def verificar
 	# 	@user = User.find(params[:id])

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post "/login" => "users#login", as: "login"
   get "/user_connect" => "users#user_connect"
   # get "/users/profile" => "users#connect"
+  get "/verificar/:user", to: "users#email_verification"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
