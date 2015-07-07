@@ -17,7 +17,10 @@
  */
 body{
 	font-size: 16px;
-	background-color:#4e5d6c;
+	background-color:silver;
+}
+.jumbotron{
+	background-color: transparent;
 }
 .main-container{
 	margin: 0 auto;
@@ -27,9 +30,11 @@ body{
 .navbar{
 	margin-bottom: 0;
 }
-
-.navbar-collapse.collapse.in{
-	margin: 0;
+.navbar-default{
+	background-color: transparent;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+	background-color: #5cb85c;
 }
 .margin-auto{
 	margin: 0 auto;
@@ -56,7 +61,7 @@ body{
   padding-bottom: 20px;
 }
 #header{
-	background-color:#4e5d6c;
+	background-color:darkslategrey;
 	margin: 0;
 }
 .btn-social{	
