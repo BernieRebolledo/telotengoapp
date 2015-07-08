@@ -1,11 +1,18 @@
-<div class="container text-center">
-	<div class="jumbotron">
-		<%if @user %>
-			<h1>Bienvenido</h1>
-			<img src="<%=@user.image%>" class="img-circle"alt="">
-			<h1><%=@user.name%></h1>
-			<h2><%=@user.email%></h2>
-		<%end%>
-		<a class="btn btn-danger navbar-right" href="/signout">Cerrar Sesión</a>
-	</div>
+<div class="main-container">
+	<div class="container-fluid">
+	<nav class="navbar navbar-green padding-sides">
+		<ul id="profile-nav" class="nav right navbar-nav">
+			<%if @user %>
+				<li>
+					<img src="<%=@user.image%>" class="img-circle avatar" alt="">
+				</li>
+				<li><%=@user.name%></li>
+				<li><%=@user.email%></li>
+			<%end%>
+			<li>
+				<a class="btn btn-danger navbar-right" href="/signout">Cerrar Sesión</a>
+			</li>
+		</ul>
+	</nav>
+</div>
 </div>

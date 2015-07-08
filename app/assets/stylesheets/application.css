@@ -18,6 +18,12 @@
 body{
 	font-size: 16px;
 }
+.padding-sides{
+	padding: 0 10px;
+}
+.right{
+	float: right;
+}
 .jumbotron{
 	background-color: transparent;
 }
@@ -33,6 +39,9 @@ body{
 }
 .navbar-default{
 	background-color: transparent;
+}
+.navbar-green {
+  background-color: darkcyan;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
 	background-color: #5cb85c;
@@ -116,7 +125,14 @@ body{
 .consumer-green{background-color:#2ba700;border:solid 1px;border-color:white}
 .mini-icon{margin-bottom:3px}
 
-
+.avatar{
+	width: 42px;
+	height: 42px;
+}
+#profile-nav li {
+  font-size: 15px;
+  padding: 0 10px;
+}
 
 @media (max-width: 768px) {
 	[login]{
