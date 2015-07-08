@@ -26,7 +26,9 @@ body{
 	margin: 0 auto;
 	max-width: 1200px;
 }
-
+[login]{
+	margin-top: 5px;
+}
 .navbar{
 	margin-bottom: 0;
 }
@@ -35,6 +37,12 @@ body{
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
 	background-color: #5cb85c;
+}
+#dLabel:hover{
+	background-color:#449d44;
+}
+.dropdown-menu{
+	background-color: white;
 }
 .margin-auto{
 	margin: 0 auto;
@@ -108,3 +116,11 @@ body{
 }
 .consumer-green{background-color:#2ba700;border:solid 1px;border-color:white}
 .mini-icon{margin-bottom:3px}
+
+
+
+@media (max-width: 768px) {
+	[login]{
+		margin-bottom: 10px;
+	}
+}
