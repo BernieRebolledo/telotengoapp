@@ -132,6 +132,9 @@ body{
 #profile-nav li {
   font-size: 15px;
   padding: 0 10px;
+  float: none;
+  position: relative;
+  display: inline;
 }
 
 @media (max-width: 768px) {
