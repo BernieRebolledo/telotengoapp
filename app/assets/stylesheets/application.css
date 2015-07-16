@@ -27,6 +27,7 @@ body{
 .jumbotron{
 	background-color: transparent;
 	color: #5c5954;
+	margin-bottom: 0;
 }
 .top-box {
   background-color: #fff;
