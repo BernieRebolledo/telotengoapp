@@ -87,6 +87,7 @@ body{
 }
 #header{
 	background-image: url("bg-top.jpg");
+	background-repeat: no-repeat;
 	margin: 0;
 }
 .btn-social{	
