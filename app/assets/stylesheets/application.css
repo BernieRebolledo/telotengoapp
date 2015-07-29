@@ -24,7 +24,7 @@ body{
 	top: 0;
 }
 .padding-sides{
-	padding: 0 10px;
+	padding: 0 20px;
 }
 .right{
 	float: right;
@@ -50,6 +50,12 @@ body{
 	background-color: transparent;
 	color: #5c5954;
 	margin-bottom: 0;
+}
+.inherit{
+	position: inherit;
+}
+.label{
+	font-size: 85%;
 }
 .dropdown-menu{
 	background-color: transparent;
