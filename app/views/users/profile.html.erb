@@ -1,18 +1,26 @@
 <div class="main-container">
 	<div class="container-fluid">
-	<nav class="navbar navbar-green padding-sides">
-		<ul id="profile-nav" class="nav right navbar-nav">
-			<%if @user %>
-				<li>
-					<img src="<%=@user.image%>" class="img-circle avatar" alt="">
-				</li>
-				<li><span><%=@user.name%></span></li>
-				<li><span><%=@user.email%></span></li>
-			<%end%>
-			<li>
-				<a class="btn btn-danger navbar-right" href="/signout">Cerrar Sesión</a>
-			</li>
-		</ul>
-	</nav>
-</div>
+		<div class="ml-header">
+			<div class="ml-header-inner">
+				<ul id="profile-nav" class="nav navbar-nav">
+				<%if @user %>
+					<li class="padding-sides">
+						<img src="<%=@user.image%>" class="img-circle avatar" alt="">
+					</li>
+					<li class="dropdown padding-sides">
+						<a id="dLabel" data-toggle="dropdown" aria-haspopup="true" class="label label-info" aria-expanded="false"><span><%=@user.name%></span></a>
+						<div class="dropdown-menu" aria-labelledby="dLabel">
+							<div class="form-group">
+								<a class="btn btn-danger" href="/signout">Cerrar Sesión</a>	
+							</div>
+							<div class="form-group">
+								<a class="btn btn-danger" href="/signout">Cerrar Sesión</a>	
+							</div>					
+						</div>
+					</li>
+				<%end%>
+			</ul>
+			</div>
+		</div>
+	</div>
 </div>

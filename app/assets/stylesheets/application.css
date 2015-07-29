@@ -29,10 +29,30 @@ body{
 .right{
 	float: right;
 }
+.ml-header {
+    background-color: teal;
+    border-bottom: 1px solid black;
+    height: 54px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+.ml-header-inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 7px 10px;
+    position: relative;
+    z-index: 1000;
+}
 .jumbotron{
 	background-color: transparent;
 	color: #5c5954;
 	margin-bottom: 0;
+}
+.dropdown-menu{
+	background-color: transparent;
 }
 .top-box {
   background-color: #fff;
@@ -64,9 +84,6 @@ body{
 }
 #dLabel:hover{
 	background-color:#449d44;
-}
-.dropdown-menu{
-	background-color: white;
 }
 .margin-auto{
 	margin: 0 auto;
@@ -147,11 +164,7 @@ body{
 	height: 42px;
 }
 #profile-nav li {
-  font-size: 15px;
-  padding: 0 10px;
-  float: none;
-  position: relative;
-  display: inline;
+
 }
 
 @media (max-width: 768px) {
