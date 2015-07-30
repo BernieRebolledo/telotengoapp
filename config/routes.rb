@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'application#index'
-  resources :users
+  resources :users, :categories, :services
   # Conectar con fb o tw
   get "/auth/:provider/callback" => "users#connect"
   get "/signout" => "users#destroy", as: "signout"

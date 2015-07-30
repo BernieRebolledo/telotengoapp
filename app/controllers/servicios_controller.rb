@@ -1,2 +1,0 @@
-class ServiciosController < ApplicationController
-end
