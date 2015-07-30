@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
 		@category = Category.new(category_params)
 		if @category.save
 			flash[:notice] = "La categoría ha sido creada."
-			redirect_to @category
+			redirect_to "/categories"
 		else
 			flash[:notice] = "La categoría no se pudo crear."
 		end
@@ -19,14 +19,10 @@ class CategoriesController < ApplicationController
 
 	end
 
-	def show
-		if session[:category]
-			@category = Category.find(session[:category])
-			render "categorias"
-		else
-			redirect_to "index"
-		end
-	end
+	# def show
+	# 	@category = Category.find(params[:id])
+	# 	render "categorias"
+	# end
 
 	def destroy
 
