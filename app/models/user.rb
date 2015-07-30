@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-	has_many :servicios
+	has_many :services
 end

@@ -23,6 +23,12 @@ body{
 	right: 50px;
 	top: 0;
 }
+.alert{
+	margin-bottom: 0;
+}
+.padding-top-50{
+	padding-top: 50px;
+}
 .padding-sides{
 	padding: 0 20px;
 }
@@ -33,7 +39,7 @@ body{
     background-color: teal;
     border-bottom: 1px solid black;
     height: 54px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -72,6 +78,11 @@ body{
 	position: relative;
 	margin: 0 auto;
 	max-width: 1200px;
+}
+.explore-header{
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
 }
 [login]{
 	margin-top: 5px;

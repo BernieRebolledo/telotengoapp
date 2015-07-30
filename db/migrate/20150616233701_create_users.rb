@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.boolean :verified
       t.string :provider_uid
       t.string :password
-
+      
       t.timestamps null: false
     end
   end

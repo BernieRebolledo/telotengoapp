@@ -33,9 +33,8 @@
 			  	</div>
 			</li>
 	      </ul>
-	    </div>		
+	    </div>
 		<div id="header">
-
 			<div class="jumbotron">
 				<div class="top-box">
 					<h1>TELO<strong>TENGO</strong></h1><p>
@@ -43,25 +42,26 @@
 					La aplicación para agendar servicios profesionales modernos
 					</p>
 					<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Únete</button>
-
-			</div>	
-			<nav class="navbar navbar-default">
-			  <div class="container-fluid">
-			    <div class="navbar-header">
-			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
-			      <!-- <a class="navbar-brand" href="#">Menú</a> -->
-			    </div>
-
-			  </div>
-			</nav>
-		</div>
-			
-	</div>	
+				</div>	
+				<nav class="navbar navbar-default">
+				  <div class="container-fluid">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				    </div>
+				  </div>
+				</nav>
+			</div>
+			<%if flash[:notice]%>
+				<div class="alert alert-dismissible alert-danger">
+				  <button type="button" class="close" data-dismiss="alert">×</button><a href="#" class="alert-link"><%= flash[:notice] %></a>
+				</div>
+			<%end%>
+		</div>	
 	<div id="howitwork" class="container-fluid  section-padding-50">
 		<div class="row text-center">
 			<h2>¿Como funciona?</h2>

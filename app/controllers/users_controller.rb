@@ -95,6 +95,9 @@ class UsersController < ApplicationController
 	  		if user && user.password == user_params[:password]
 	  			session[:user] = user.id
 	  			redirect_to user
+	  		else
+	  			flash[:notice] = "Su correo o la contraseña no existen"
+	  			redirect_to "/"
 	  		end
 	  	end
   	end
