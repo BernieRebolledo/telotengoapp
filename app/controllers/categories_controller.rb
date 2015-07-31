@@ -8,10 +8,11 @@ class CategoriesController < ApplicationController
 
 		@category = Category.new(category_params)
 		if @category.save
-			flash[:notice] = "La categoría ha sido creada."
+			flash[:notice_succes] = "La categoría ha sido creada."
 			redirect_to "/categories"
 		else
-			flash[:notice] = "La categoría no se pudo crear."
+			flash[:notice_fail] = "La categoría ya existe!!"
+			redirect_to "/categories"
 		end
 	end
 

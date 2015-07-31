@@ -25,6 +25,10 @@ ActiveRecord::Schema.define(version: 20150710231535) do
 
   create_table "services", force: :cascade do |t|
     t.integer  "count"
+    t.string   "name"
+    t.string   "description"
+    t.string   "price"
+    t.string   "company"
     t.integer  "category_id"
     t.integer  "user_id"
     t.datetime "created_at",  null: false

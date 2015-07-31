@@ -51,8 +51,8 @@ class UsersController < ApplicationController
 			flash[:notice] = "Su usuario se ha creado."
 			redirect_to @user
 		else
-			flash[:notice] = "No se puedo crear el usuario intente de nuevo"
-			render "/"
+			flash[:notice] = "No se pudo crear el usuario, este correo ya está en uso!!"
+			render "/index"
 		end
 	end
 

@@ -1,27 +1,42 @@
-<h1>Crea las categorias</h1>
-<%= form_tag("/categories", method: "post", :class => "form-horizontal") do %>
-	<div class="form-group">
-		<div class="input-group margin-bottom-sm">
-		<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-		<input class="form-control" type="text" name="category[name]" placeholder="Nombre de la categoría" required>
-		</div>	
-		<div class="input-group margin-bottom-sm">
-		<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-		<input class="form-control" type="text" name="category[description]" placeholder="Descripción" required>
+<div class="container">
+	<%if flash[:notice_success]%>
+		<div class="alert alert-dismissible alert-success">
+		  <button type="button" class="close" data-dismiss="alert">×</button><a href="#" class="alert-link"><%= flash[:notice_success] %></a>
 		</div>
-<!-- 		<div class="input-group">
-		<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-		<input class="form-control" name="user[password]" type="password" placeholder="Contraseña" required>
-		</div>	 -->				  
+	<%end%>
+	<%if flash[:notice_fail]%>
+		<div class="alert alert-dismissible alert-danger">
+		  <button type="button" class="close" data-dismiss="alert">×</button><a href="#" class="alert-link"><%= flash[:notice_fail] %></a>
+		</div>
+	<%end%>
+	<h1>Crea las categorias</h1>
+	<%= form_tag("/categories", method: "post", :class => "form-horizontal") do %>
+		<div class="form-group">
+			<div class="input-group margin-bottom-sm">
+			<span class="input-group-addon"><i class="fa fa-tasks fa-fw"></i></span>
+			<input class="form-control" type="text" name="category[name]" placeholder="Nombre de la categoría" required>
+			</div>	
+			<div class="input-group margin-bottom-sm">
+			<span class="input-group-addon"><i class="fa fa-info fa-fw"></i></span>
+			<input class="form-control" type="text" name="category[description]" placeholder="Descripción" required>
+			</div>
+	<!-- 		<div class="input-group">
+			<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+			<input class="form-control" name="user[password]" type="password" placeholder="Contraseña" required>
+			</div>	 -->				  
+		</div>
+		<div class="text-center margin-vertical">
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</div>
+	<% end %>
+	<% @category = Category.all %>
+	<% @category.each do |x| %>
+	<div class="col-md-4 col-sm-6 col-xs-12">
+		<h3>Categoría: <small><%= x.id %></small></h3>
+		<h3>Nombre: <small><%= x.name %></small></h3>
+		<h3>Descripción: <small><%= x.description %></small></h3>
+		<br>
 	</div>
-	<div class="text-center margin-vertical">
-		<button type="submit" class="btn btn-primary">Enviar</button>
-	</div>
-<% end %>
-<% @category = Category.all %>
-<% @category.each do |x| %>
-<h1>Categoría: <small><%= x.id %></small></h1>
-<h1>Nombre: <small><%= x.name %></small></h1>
-<h1>Descripción: <small><%= x.description %></small></h1>
-<br>
-<% end %>
+
+	<% end %>
+</div>
