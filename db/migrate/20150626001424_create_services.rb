@@ -6,6 +6,7 @@ class CreateServices < ActiveRecord::Migration
 		t.string :description
 		t.string :price
 		t.string :company
+    t.integer :category_id
     	t.references :category, index: true
     	t.references :user, index: true
       t.timestamps null: false

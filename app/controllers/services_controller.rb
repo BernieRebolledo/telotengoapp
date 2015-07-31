@@ -1,11 +1,14 @@
 class ServicesController < ApplicationController
 
 	def index
+		@user = User.find(session[:user])
 		render "index"
 	end
 
 	def create
 		@service = Service.new(service_params)
+		@service.user_id = session[:user]
+		@service.category_id = service_params[:category_id]
 		if @service.save
 			flash[:notice_success] = "El servicio ha sido creada."
 			redirect_to "/services"
@@ -30,7 +33,7 @@ class ServicesController < ApplicationController
 	private
 
 	def service_params
-		params.require(:service).permit(:name, :description, :price, :company, :count)
+		params.require(:service).permit(:name, :description, :price, :company, :count, :category_id)
 	end
 
 end
