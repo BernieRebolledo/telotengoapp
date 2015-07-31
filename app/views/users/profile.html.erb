@@ -5,7 +5,11 @@
 				<ul id="profile-nav" class="nav navbar-nav">
 					<%if @user %>
 						<li class="padding-sides">
+							<%if @user.image %>
 							<img src="<%=@user.image%>" class="img-circle avatar" alt="">
+							<%else%>
+							<img src="../assets/user.png" class="img-circle avatar" alt="">
+							<%end%>
 						</li>
 						<li class="dropdown">
 							<a id="dLabel2" data-toggle="dropdown" aria-haspopup="true" class="label label-info" aria-expanded="false"><span><%=@user.name%></span></a>
