@@ -159,6 +159,11 @@ body{
 	font-size:1.3rem;
 	margin:.4rem .25rem .4rem .25rem
 }
+#categories a:hover{
+	text-decoration: none;
+	color: lime;
+}
+.teal{background-color: teal}
 .green1{background-color:#2ba700}
 .green2{background-color:#247302}
 .green3{background-color:#154f00}
