@@ -1,0 +1,59 @@
+<div class="container">
+	<div class="jumbotron">
+		<h1><%=@user.name%></h1>
+	</div>
+	<%if flash[:notice_success]%>
+		<div class="alert alert-dismissible alert-success">
+		  <button type="button" class="close" data-dismiss="alert">×</button><a href="#" class="alert-link"><%= flash[:notice_success] %></a>
+		</div>
+	<%end%>
+	<%if flash[:notice_fail]%>
+		<div class="alert alert-dismissible alert-danger">
+		  <button type="button" class="close" data-dismiss="alert">×</button><a href="#" class="alert-link"><%= flash[:notice_fail] %></a>
+		</div>
+	<%end%>
+	<h1>Crea tu nuevo servicio</h1>
+	<%= form_tag("/services", method: "post", :class => "form-horizontal") do %>
+		<div class="form-group">
+			<div class="input-group margin-bottom-sm">
+			<span class="input-group-addon"><i class="fa fa-tasks fa-fw"></i></span>
+			<input class="form-control" type="text" name="service[name]" placeholder="Nombre del servicio" required>
+			</div>	
+			<div class="input-group margin-bottom-sm">
+			<span class="input-group-addon"><i class="fa fa-info fa-fw"></i></span>
+			<input class="form-control" type="text" name="service[description]" placeholder="Descripción" required>
+			</div>	
+			<div class="input-group margin-bottom-sm">
+			<span class="input-group-addon"><i class="fa fa-info fa-fw"></i></span>
+			<input class="form-control" type="text" name="service[price]" placeholder="Precio base" required>
+			</div>
+			<div class="input-group margin-bottom-sm">
+			<span class="input-group-addon"><i class="fa fa-info fa-fw"></i></span>
+			<input class="form-control" type="text" name="service[company]" placeholder="Empresa" required>
+			</div>	
+			<div class="input-group margin-bottom-sm">
+			<span class="input-group-addon"><i class="fa fa-info fa-fw"></i></span>
+			<select class="form-control" name="service[cateory_id]" required>
+				<% @category = Category.all %>
+				<% @category.each do |x| %>
+			  	<option value="<%=x.name%>"><%=x.name%></option>
+				<% end %>
+			</select>
+			</div>
+		</div>
+		<div class="text-center margin-vertical">
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</div>
+	<% end %>
+	<% @service = Service.where(user_id:session[:user])%>
+	<% @service.each do |x| %>
+	<div class="col-md-4 col-sm-6 col-xs-12">
+		<h3>Nombre: <small><%= x.name %></small></h3>
+		<h3>Descripción: <small><%= x.description %></small></h3>
+		<h3>Precio: <small><%= x.price %></small></h3>
+		<h3>Empresa: <small><%= x.company %></small></h3>
+		<h3>Categoría: <small><%= x.category_id %></small></h3>
+		<br>
+	</div>
+	<% end %>
+</div>
