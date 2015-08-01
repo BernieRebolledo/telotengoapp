@@ -20,10 +20,11 @@ class CategoriesController < ApplicationController
 
 	end
 
-	# def show
-	# 	@category = Category.find(params[:id])
-	# 	render "categorias"
-	# end
+	def show
+		@category = Category.find(params[:id])
+		@services_category = Service.where(category_id: params[:id])
+		render "categorias"
+	end
 
 	def destroy
 

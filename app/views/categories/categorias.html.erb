@@ -1,2 +1,16 @@
 <h1><%= @category.name %></h1>
 <h1><%= @category.description %></h1>
+<%if @services_category %>
+	<% @services_category.each do |x| %>
+		<div class="col-md-3 col-sm-4 col-xs-12">
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<h3>Nombre: <small><%= x.name %></small></h3>
+				<h3>Descripción: <small><%= x.description %></small></h3>
+				<h3>Precio: <small><%= x.price %></small></h3>
+				<h3>Empresa: <small><%= x.company %></small></h3>
+				<h3>Categoría: <small><%= x.category_id %></small></h3>
+				<br>
+			</div>
+		</div>
+	<%end%>
+<%end%>

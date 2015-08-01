@@ -47,7 +47,7 @@
 	      							<% @category = Category.all %>
 									<% @category.each do |x| %>
 									<div class="col-md-3 col-sm-4 col-xs-12">
-											<a href="" class="tag-cloud teal">
+											<a href="/categories/<%=x.id%>" class="tag-cloud teal">
 												<!-- <img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" /> -->
 												<%= x.name %>
 											</a>
