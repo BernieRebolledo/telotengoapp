@@ -12,4 +12,7 @@
 //
 //= require jquery-2.1.4.min
 //= require jquery_ujs
+//= require jquery.base64
+//= require tableExport
+//= require bootstrap-table
 //= require bootstrap.min
