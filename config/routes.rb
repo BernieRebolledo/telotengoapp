@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "/user_connect" => "users#user_connect"
   # get "/users/profile" => "users#connect"
   get "/verificar/:user", to: "users#email_verification"
+  get "/search" => "services#search"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

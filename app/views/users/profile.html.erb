@@ -24,9 +24,9 @@
 						</li>
 					<%end%>
 				</ul>
-				<%= form_tag("/users", method: "post", :class => "navbar-form navbar-left", :role => "search") do %>
+				<%= form_tag("/search", method: "get", :class => "navbar-form navbar-left") do %>
 					<div class="form-group">
-			          <input type="text" style="width:200px"class="form-control" placeholder="¿Que servicio necesitas?">
+			          <input name="service[search]"type="text" style="width:200px" class="form-control" placeholder="¿Que servicio necesitas?">
 			        </div>
 			        <button type="submit" class="btn btn-info">Buscar</button>
 				<%end%>
@@ -58,7 +58,22 @@
   						</div>
 					</section>
 				</div>
-				<div class="explore-footer"></div>
+				<div class="explore-footer">
+					<%if @services1 %>
+						<% @services1.each do |x| %>
+							<div class="col-md-3 col-sm-4 col-xs-12">
+									<div class="col-md-4 col-sm-6 col-xs-12">
+										<h3>Nombre: <small><%= x.name %></small></h3>
+										<h3>Descripción: <small><%= x.description %></small></h3>
+										<h3>Precio: <small><%= x.price %></small></h3>
+										<h3>Empresa: <small><%= x.company %></small></h3>
+										<h3>Categoría: <small><%= x.category_id %></small></h3>
+										<br>
+									</div>
+							</div>
+						<%end%>
+					<%end%>
+				</div>
 			</div>
 		</div>
 	</div>

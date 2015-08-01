@@ -29,11 +29,19 @@ class ServicesController < ApplicationController
 	def destroy
 		
 	end
+
+	def search
+		@user = User.find(session[:user])
+		@services1 = Service.where(name: service_params[:search])
+		puts service_params[:search].to_s
+		render "/users/profile"
+	end
 	
 	private
 
+
 	def service_params
-		params.require(:service).permit(:name, :description, :price, :company, :count, :category_id)
+		params.require(:service).permit(:name, :description, :price, :company, :count, :category_id, :search)
 	end
 
 end

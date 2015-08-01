@@ -122,46 +122,11 @@
 		<div class="vertical-space-20"></div>
 		<div class="row">
 			<div class="margin-auto" style="width:50%">
+				<% @category = Category.all %>
+				<% @category.each do |x| %>
 				<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		Handyman</span>
-	       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdadasd</span>
-	       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdad</span>
-	       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdasdasdasdadad</span>
-	       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdasdasd</span>
-	       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asda</span>
-	       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdasdadad</span>
-	       		<span class="tag-cloud green1"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		Handyman</span>
-	       		<span class="tag-cloud green2"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdasdasd</span>
-	       		<span class="tag-cloud green2"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdsa</span>
-	       		<span class="tag-cloud green2"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdn</span>
-	       		<span class="tag-cloud green2"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		adsasdasd</span>
-	       		<span class="tag-cloud green2"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdasd</span>
-	       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdasdsadasdads</span>
-	       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdasd</span>
-	       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdasdasdad</span>
-	       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		sadn</span>
-	       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdasdsadasd</span>
-	       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		asdasd</span>
-	       		<span class="tag-cloud green3"><img alt="Mini-icon_handyman" class="mini-icon" height="17" src="/assets/handyman.png" width="17" />
-	       		Hasdasdasdasda</span>
+	       		<%=x.name%></span>
+	       		<%end%>
 	       		<br>
 	       		<br>
 	       		<span class="tag-cloud gray">
