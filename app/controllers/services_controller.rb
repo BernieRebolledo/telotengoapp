@@ -32,7 +32,7 @@ class ServicesController < ApplicationController
 
 	def search
 		@user = User.find(session[:user])
-		@services1 = Service.where(name: service_params[:search])
+		@services_search = Service.where(name: service_params[:search])
 		puts service_params[:search].to_s
 		render "/users/profile"
 	end

@@ -59,19 +59,29 @@
 					</section>
 				</div>
 				<div class="explore-footer">
-					<%if @services1 %>
-						<% @services1.each do |x| %>
-							<div class="col-md-3 col-sm-4 col-xs-12">
-									<div class="col-md-4 col-sm-6 col-xs-12">
-										<h3>Nombre: <small><%= x.name %></small></h3>
-										<h3>Descripción: <small><%= x.description %></small></h3>
-										<h3>Precio: <small><%= x.price %></small></h3>
-										<h3>Empresa: <small><%= x.company %></small></h3>
-										<h3>Categoría: <small><%= x.category_id %></small></h3>
-										<br>
-									</div>
-							</div>
-						<%end%>
+					<%if @services_search %>
+						<table data-toggle="table" data-sort-name="name" data-sort-order="desc" data-show-columns="true" data-search="true" data-show-refresh="true" data-show-toggle="true" data-show-export="true" data-pagination="true" data-height="299">
+						    <thead>
+							    <tr>
+							        <th data-field="name">Nombre</th>
+							        <th data-field="description">Descripción</th>
+							        <th data-field="price" data-sortable="true">Precio</th>
+							        <th data-field="company" data-sortable="true">Empresa</th>
+							    </tr>
+						    </thead>
+						    <tbody>
+						    		
+										<% @services_search.each do |x| %>
+											<tr>
+										        <td data-field="name"><%= x.name %></td>
+										        <td data-field="description"><%= x.description %></td>
+										        <td data-field="price"><%= x.price %></td>
+										        <td data-field="company"><%= x.company %></td>
+											</tr>
+										<%end%>
+									
+						    </tbody>
+						</table>
 					<%end%>
 				</div>
 			</div>
