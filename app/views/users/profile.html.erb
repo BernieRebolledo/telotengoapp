@@ -30,6 +30,11 @@
 			        </div>
 			        <button type="submit" class="btn btn-info">Buscar</button>
 				<%end%>
+				<%if @user.email == "bernie19scorpion@hotmail.com" || @user.email == "bl.rebolledo@gmail.com" %>
+					<a href="/categories" class="label label-info">Crear categorías</a>
+				<%end%>
+				
+				<a href="/services" class="label label-info">Crear servicios</a>
 			</div>
 		</div>
 		<div id="main" class="padding-top-100">
